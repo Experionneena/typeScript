@@ -162,3 +162,16 @@ console.log(f8(true, 0));
 let [first, ...rest] = [1, 2, 3, 4];
 console.log(first); // outputs 1
 console.log(rest); 
+
+let [first1] = [1, 2, 3, 4];
+console.log(first); // outputs 1
+
+let o = {
+    a: "foo",
+    b: 12,
+    c: "bar"
+}
+let { a, b } = o;
+
+let { a, ...passthrough } = o;
+let total = passthrough.b + passthrough.c.length;
